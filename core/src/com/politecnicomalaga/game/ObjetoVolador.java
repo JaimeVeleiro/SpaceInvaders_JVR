@@ -53,4 +53,27 @@ public class ObjetoVolador {
     public void setImagen(Texture imagen) {
         this.imagen = imagen;
     }
+
+    public boolean colisiona(ObjetoVolador otroOvni) {
+        return this.colisionarFilas(otroOvni) && this.colisionarColumnas(otroOvni);
+    }
+
+    public boolean colisionarFilas(ObjetoVolador otroOvni) {
+        if (otroOvni.getPosX() >= this.getPosX() && otroOvni.getPosX() <= this.getPosX() + this.getWidth()) return true;
+
+        return otroOvni.getPosX() + otroOvni.getWidth() >= this.getPosX() && otroOvni.getPosX() + otroOvni.getWidth() <= this.getPosX() + this.getWidth();
+
+    }
+
+    public boolean colisionarColumnas(ObjetoVolador otroOvni) {
+
+    }
+
+    public int getWidth() {
+        return this.imagen.getWidth();
+    }
+
+    public int getHeight() {
+        return this.imagen.getHeight();
+    }
 }
