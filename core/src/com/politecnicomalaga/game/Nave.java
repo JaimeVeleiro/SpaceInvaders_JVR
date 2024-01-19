@@ -7,8 +7,8 @@ public class Nave extends ObjetoVolador{
     protected Texture explosion;
     protected boolean vivo;
 
-    public Nave(float posX, float posY, float velY, Texture sprite, Texture explosion){
-        super(posX, posY, velY, sprite);
+    public Nave(float posX, float posY, float velY, float velX, Texture sprite, Texture explosion){
+        super(posX, posY, velY, velX, sprite);
         this.explosion = explosion;
         this.vivo = true;
     }
