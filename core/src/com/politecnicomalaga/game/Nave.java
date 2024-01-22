@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Nave extends ObjetoVolador{
-    protected Texture explosion;
+    protected Texture explosion, imagen;
     protected boolean vivo;
 
     public Nave(float posX, float posY, float velY, float velX, Texture sprite, Texture explosion){

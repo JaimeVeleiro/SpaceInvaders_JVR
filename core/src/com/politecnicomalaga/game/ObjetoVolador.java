@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Texture;
 
 public class ObjetoVolador {
     protected float posX, posY, velX, velY;
-    protected Texture sprite;
+    protected Texture sprite, imagen;
 
     public ObjetoVolador(float posX, float posY, float velX, float velY, Texture sprite) {
         this.posX = posX;
@@ -66,7 +66,9 @@ public class ObjetoVolador {
     }
 
     public boolean colisionarColumnas(ObjetoVolador otroOvni) {
+        if (otroOvni.getPosY() >= this.getPosY() && otroOvni.getPosY() <= this.getPosY() + this.getWidth()) return true;
 
+        return otroOvni.getPosY() + otroOvni.getWidth() >= this.getPosY() && otroOvni.getPosX() + otroOvni.getWidth() <= this.getPosX() + this.getWidth();
     }
 
     public int getWidth() {
@@ -75,5 +77,9 @@ public class ObjetoVolador {
 
     public int getHeight() {
         return this.imagen.getHeight();
+    }
+
+    public void dispose(){
+        imagen.dispose();
     }
 }

@@ -3,11 +3,11 @@ package com.politecnicomalaga.game;
 import com.badlogic.gdx.graphics.Texture;
 import java.util.ArrayList;
 
-public class NaveAmiga extends Nave{
+public class NaveEnemiga extends Nave{
 
     private ArrayList<DisparoAmigo> rafagaDisparos;
 
-    public NaveAmiga(float posX, float posY, float velY, float velX, Texture sprite, Texture explosion/*, ArrayList<rafagaDisparos> lista*/) {
+    public NaveEnemiga(float posX, float posY, float velY, float velX, Texture sprite, Texture explosion/*, ArrayList<rafagaDisparos> lista*/) {
         super(posX, posY, velY, velX, sprite, explosion);
         this.rafagaDisparos = new ArrayList<>();
         //this.rafagaDisparos = lista;
@@ -32,7 +32,7 @@ public class NaveAmiga extends Nave{
     }*/
 
     public void crearDisparo(Texture spriteDisparo){
-        DisparoAmigo unDisparo = new DisparoAmigo(posX, posY, 2.0f,0, spriteDisparo);
+        DisparoAmigo unDisparo = new DisparoAmigo(posX, posY, 2.0f, 0, spriteDisparo);
         rafagaDisparos.add(unDisparo);
     }
 
